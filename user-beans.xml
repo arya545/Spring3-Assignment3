@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+<!-- creating bean of person type -->
+<bean id="person" class="com.spring.session3.Person">
+<property name="name" value="Ram"></property>
+<property name="type" value="admin"></property>
+</bean>
+
+<!-- Creating bean of CustomEditorConfigurer -->
+<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer" >
+<property name="customEditors">
+<map>
+<entry key="com.spring.session3.PersonType" value="com.spring.session3.PersonTypeEditor"></entry>
+</map>
+</property>
+</bean>
+
+</beans>
